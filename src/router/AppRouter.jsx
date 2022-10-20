@@ -14,11 +14,9 @@ export const AppRouter = () => {
     return (
         // screencast Mode permite que parezca un cirulo rojo en el cursor y letreros de las teclas que se oprimen.
         // se puede colocar el path='login' sin /
+        // Ruta principal.
 
         <>
-
-
-
             <Routes>
                 
                 <Route path='login' element={ <LoginPage/> } />
