@@ -11,7 +11,7 @@ export const HeroPage = () => {
     const hero =  useMemo( () => getHeroById( id ), [id] );
 
     // const hero =  getHeroById( id );
-    console.log(hero);
+    // console.log(hero);
 
     // useMemo: para memorizar valores.
     // useCallback: para memorizar funciones.
@@ -38,7 +38,7 @@ export const HeroPage = () => {
                 <img
                     src={ `/assets/heroes/${ id }.jpg` }
                     alt={ hero.superhero }
-                    className='img-thumbnail'
+                    className='img-thumbnail animate__animated animate__fadeInLeft'
                 />
             </div>
 

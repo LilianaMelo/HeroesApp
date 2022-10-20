@@ -14,7 +14,6 @@ export const HeroList = ({ publisher }) => {
         
         <>
             <div className="row rows-cols-3 row-cols-md-3 g-3" >
-
            
                 {
                     heroes.map(hero => (
@@ -23,10 +22,6 @@ export const HeroList = ({ publisher }) => {
                         />
                     ))
                 }
-
-
-
-
 
                 {/* <div className="card"  { maxWidth: 540 } >
                     <img src="..." className="card-img-top" alt="..." />

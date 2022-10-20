@@ -28,10 +28,10 @@ export const HeroCard = ({
     // const charactersByHero = (<p>{ characters }</p>);
     
     return (
-        <div className='col'>
+        <div className='col animate__animated animate__fadeIn'>
             <div className='card'>
                 <div className='row no-gutters'>
-                    <div className='col-4'>
+                    <div className='col-4 ' >
                         <img src={ `./assets/heroes/${id}.jpg` } alt={superhero} className='card-img'/> 
                         {/* para que funcione  `./assets/heroes/${id}.jpg`, dentro de assets debe ir otra carpeta llamada heroes y dentro de esta las imgs.  */}
                     </div>
