@@ -1,24 +1,29 @@
+import { useContext } from 'react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../autenticacion/context/AuthContext';
 
 
 export const Navbar = () => {
 
-    // constante para salir de la pantalla de la app.
+    // nombre del loginPage
+    const { user, logout } = useContext( AuthContext );
+    // console.log(user);
+
     // custom hook, porque no viene directamente de react.
-    
     // revisar en la consola en los components de react en la parte de Navigation.Provider -> props -> value -> navigator
     const navigate = useNavigate();
 
     // funcion para salir de la pantalla de la app.
     const onLogout = () => {
         // console.log("Logout");
-        navigate("/login", {
+
+        logout(); // aqui limpia el localStorage y el State. Y luego navega al usuario.
+        
+        navigate('/login', {
             replace: true  // reemplaza la ruta que yo tengo, y evita q el usuario regrese al la pagina anterior o al historial anterior. Cuando se sale de la app, y esta en el login
 
         }); // con esto se navega al login
     }
-
-
 
     return (
         <nav className="navbar navbar-expand-sm navbar-warning bg-warning p-2 mb-3">
@@ -67,7 +72,7 @@ export const Navbar = () => {
                     </NavLink> */}
 
                     <span className="nav-item nav-link text-danger">
-                        Liliana
+                        { user?.name } {/* ? si esto es nulo que no continue, pero si tiene un valor que lo muestre.  */}
                     </span>
 
                     <button
@@ -77,9 +82,9 @@ export const Navbar = () => {
                         Cerrar Sesion
                     </button>
 
-
                 </ul>
             </div>
         </nav>
     )
 }
+

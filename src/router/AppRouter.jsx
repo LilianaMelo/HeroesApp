@@ -7,6 +7,8 @@ import { Route, Routes } from 'react-router-dom';
 
 import { HeroesRoutes } from '../heroes/routes/HeroesRoutes';
 import { LoginPage } from '../autenticacion';
+import { PrivateRoute } from './PrivateRoute';
+import { PublicRoute } from './PublicRoute';
 
 
 export const AppRouter = () => {
@@ -19,13 +21,39 @@ export const AppRouter = () => {
         <>
             <Routes>
                 
-                <Route path='login' element={ <LoginPage/> } />
+                {/* <Route path='login' element={ <LoginPage/> } /> */}
 
-                <Route path='/*' element={ <HeroesRoutes /> } />
+                {/* esta es una forma de hacerla... */}
+                <Route path='/login' element={
+                    <PublicRoute>
+                        <LoginPage />
+                    </PublicRoute>
+                    }
+                />
 
+                
+                {/* <Route path='login/*' element={
+                    <PublicRoute>
+                        <Routes>
+                            <Route path='/*' element={ <LoginPage/> } />
+                            {/* <Route path='/*' element={ <LoginPage/> } /> // se pueden poner más rutas hijas o publicas... * //
+                        </Routes>
+                    </PublicRoute>
+                    }
+                />  */}
+
+
+                {/* esta ruta es para hacer las rutas privadas y dentro de ella va la ruta de HeroesRoute */}
+                <Route path='/*' element={
+                    <PrivateRoute>
+                        <HeroesRoutes />        
+                    </PrivateRoute>
+                } /> 
+
+                {/* <Route path='/*' element={ <HeroesRoutes /> } /> */}
 
             </Routes>
-        
+
         </>
     )
 }

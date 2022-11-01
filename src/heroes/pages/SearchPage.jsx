@@ -125,3 +125,6 @@ export const SearchPage = () => {
 
     )
 }
+
+// proteccion de rutas publicas y privadas: se crea carpeta de context y types, dentro de atenticacion.
+
