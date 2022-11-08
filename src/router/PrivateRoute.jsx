@@ -18,7 +18,7 @@ export const PrivateRoute = ({ children }) => {
     const  { pathname, search } = useLocation();
 
     const lastPath =  pathname + search;
-
+    // ultima ruta que se graba en el localStore
     localStorage.setItem('lastPath', lastPath);
     // console.log("redibujar");
 

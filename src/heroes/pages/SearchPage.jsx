@@ -44,8 +44,8 @@ export const SearchPage = () => {
         // console.log({ searchText });
 
         // if (searchText.trim().length <= 1) return;
-
         
+        console.log("desde testing... 'FORM' ") // con esto se conforma que si se esta haciendo el submit o envio del formulario en la prueba.
 
         // ?q=${ searchText } estos es un query parametro.
         navigate(`?q=${ searchText }`);   
@@ -67,7 +67,7 @@ export const SearchPage = () => {
                 
                 <h4>Búsquedas</h4>
 
-                <form onSubmit={ onSearchSubmit }>
+                <form onSubmit={ onSearchSubmit } aria-label="form" >
                     <input 
                         type="text"
                         placeholder='Buscar heroe'
@@ -101,14 +101,12 @@ export const SearchPage = () => {
                         Buscar heroe
                     </div>
 
-
-                    <div 
+                    {/* se pone este nombre aria-label='alert-danger' para poder hacer la prueba del test en SearchPage.test.jsx */}
+                    <div aria-label='alert-danger'
                         className='alert alert-danger animate__animated animate__fadeIn' 
                         style={{ display: showError ? "" : "none" }}>
                         No hay un heroe con <b>{ q }</b> 
                     </div>
-
-
 
                     {
                         heroes.map( hero => (

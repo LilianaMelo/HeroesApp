@@ -18,9 +18,7 @@ export const authReducer = ( state = {}, action ) => {
         
         case types.logout:
             return {
-                // ...state,
                 logged: false, // aqui se quita el name, porque ya no estar en el state el nombre.
-                // user: action.payload
             };
 
         default:

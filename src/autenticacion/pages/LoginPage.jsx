@@ -32,30 +32,27 @@ export const LoginPage = () => {
             {/* Form en construccion */}
             <div className='row d-flex justify-content-center'>
                 <div className='col-sm-8'>
-                <form >
-                    <div className="mb-3 mt-3">
-                        <label htmlFor="exampleInputEmail1" className="form-label">Usuario:</label>
-                        <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
-                        <div className="form-text">Se requiere que ingreses algún nombre.</div>
-                    </div>
-                    <div className="mb-3">
-                        <label htmlFor="exampleInputPassword1" className="form-label">Contraseña:</label>
-                        <input type="password" className="form-control" id="exampleInputPassword1" />
-                    </div>
+                    <form >
+                        <div className="mb-3 mt-3">
+                            <label htmlFor="exampleInputEmail1" className="form-label">Usuario:</label>
+                            <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                            <div className="form-text">Se requiere que ingreses algún nombre.</div>
+                        </div>
+                        <div className="mb-3">
+                            <label htmlFor="exampleInputPassword1" className="form-label">Contraseña:</label>
+                            <input type="password" className="form-control" id="exampleInputPassword1" />
+                        </div>
 
-                    <button 
-                    className='btn btn-warning btn-block'
-                    onClick={ onLogin }
-                    >
-                        Ingresar
-                    </button>
-
-                    <div className="form-text">Página demo con React, solo debes ingresar un nombre y dar click en ingresar.</div>
-
-                </form>
+                        <button 
+                        className='btn btn-warning btn-block'
+                        onClick={ onLogin }
+                        >
+                            Ingresar
+                        </button>
+                        <div className="form-text">Página demo con React, solo debes ingresar un nombre y dar click en ingresar.</div>
+                    </form>
                 </div>
             </div>
-
         </div>
     )
 }

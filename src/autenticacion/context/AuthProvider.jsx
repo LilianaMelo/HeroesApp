@@ -34,7 +34,6 @@ export const AuthProvider = ({ children }) => {
             type: types.login,
             payload: user
         }
-
         // guarda info en localStorage.
         // al localStorage solo se puede enviar strings.
         localStorage.setItem("user", JSON.stringify(user) );
@@ -48,7 +47,6 @@ export const AuthProvider = ({ children }) => {
         const action = { type: types.logout };
         dispatch( action );
     }
-
 
     return (
         <AuthContext.Provider value={{ 

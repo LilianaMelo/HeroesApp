@@ -13,7 +13,6 @@ const CharactersByHero = ({alter_ego, characters}) => {
 }
 
 export const HeroCard = ({
-
     id,
     superhero, 
     publisher, 
@@ -22,9 +21,7 @@ export const HeroCard = ({
     characters,
 
 }) => {
-    
     // const heroImageUrl = `/assets/heroes/${id}.jpg`;
-
     // const charactersByHero = (<p>{ characters }</p>);
     
     return (
@@ -40,7 +37,6 @@ export const HeroCard = ({
                         <div className="card-body">
                             <h5 className='card-title'>{ superhero }</h5>
                             <p className='card-text'>{ alter_ego }</p>
-
 
                             { // alter_ego si es diferente a los personajes interpretados si es asi: entonces muestra el parrafo
                                // (alter_ego !== characters ) && (<p>{ characters }</p>)
@@ -59,16 +55,10 @@ export const HeroCard = ({
                                 Más...
                             </Link>
                             
-
                         </div>
                     </div>
-
-                    
                 </div>
-                
-
             </div>
-
         </div>
     )
 }
