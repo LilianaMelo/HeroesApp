@@ -72,7 +72,7 @@ export const Navbar = () => {
                     </NavLink> */}
 
                     <span className="nav-item nav-link text-danger">
-                        { user?.name } {/* ? si esto es nulo que no continue, pero si tiene un valor que lo muestre.  */}
+                        { user?.name  } {/* ? si esto es nulo que no continue, pero si tiene un valor que lo muestre.  */}
                     </span>
 
                     <button

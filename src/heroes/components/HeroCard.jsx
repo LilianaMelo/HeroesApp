@@ -29,7 +29,7 @@ export const HeroCard = ({
             <div className='card mt-3'>
                 <div className='row no-gutters'>
                     <div className='col-4 ' >
-                        <img src={ `./assets/heroes/${id}.jpg` } alt={superhero} className='card-img'/> 
+                        <img src={ `./assets/heroes/${id}.jpg` } alt={superhero} className='card-img' style={ {maxWidth: 540} } /> 
                         {/* para que funcione  `./assets/heroes/${id}.jpg`, dentro de assets debe ir otra carpeta llamada heroes y dentro de esta las imgs.  */}
                     </div>
 

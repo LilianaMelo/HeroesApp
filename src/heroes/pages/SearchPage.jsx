@@ -7,10 +7,6 @@ import { HeroCard } from '../components/HeroCard';
 
 export const SearchPage = () => {
 
-    
-
-    
-
     // para saber la localizacion para saber donde estamos en que pagina. o heroe.
     const location = useLocation() ;
     // se instala un paquete query-string
@@ -60,8 +56,6 @@ export const SearchPage = () => {
             <hr />
 
         <div className='row'>
-
-        
 
             <div className="col-5">
                 

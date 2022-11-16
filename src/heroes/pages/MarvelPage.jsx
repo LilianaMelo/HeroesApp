@@ -10,11 +10,6 @@ export const MarvelPage = () => {
 
             <HeroList publisher="Marvel Comics"/>
 
-            
-
-
-
-
         </>
     )
 }
